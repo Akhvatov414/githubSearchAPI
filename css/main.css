@@ -60,6 +60,7 @@ body {
 	margin-top: 62px;*/
 	align-items: center;
 	justify-items: center;
+	position: relative;
 }
 
 .search-form__input{
@@ -76,7 +77,8 @@ body {
 }
 
 .search-form__list{
-	/* margin: 0; */
+	margin: 0;
+	position: absolute;
 }
 
 .list-item{
