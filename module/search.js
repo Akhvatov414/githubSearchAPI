@@ -62,7 +62,6 @@ export class SEARCH{
         repoElement.innerHTML = `${repoData.name}`;
         this.autocompleteList.append(repoElement);
         repoElement.addEventListener('click', () => {
-            //console.log(repoData.owner.login);
             this.selectElement(repoData.name, repoData.owner.login, repoData.stargazers_count)
         })
         this.listItem = repoElement;
@@ -71,13 +70,6 @@ export class SEARCH{
     selectElement(name, owner, stars){
         const searchRes = this.createElement('div', 'container');
         const closeButton = this.createElement('button', 'template-button');
-        // const closeImg1 = this.createElement('img');
-        // closeImg1.src ='./img/close1.svg';
-        // closeImg1.alt = 'Удалить элемент';
-        // const closeImg2 = this.createElement('img');
-        // closeImg2.src ='./img/close2.svg';
-        // closeImg2.alt = 'Удалить элемент';
-        //closeImg.innerHTML = "<div class = 'test'>CLOSE</div>"
         const props = this.createElement('ul', 'conatiner__props');
         props.innerHTML = `
         <li class = 'props'>Name: ${name}</li>
@@ -89,8 +81,6 @@ export class SEARCH{
             close.remove();
         })
         searchRes.append(props);
-        //closeButton.append(closeImg1);
-        // closeButton.append(closeImg2);
         searchRes.append(closeButton);
         this.main.append(searchRes);
         this.clearSearch();
