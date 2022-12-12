@@ -1,0 +1,135 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+/*nav,footer,header,aside{display: block;}*/
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none; cursor: pointer;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+body {
+	background-color: #C4C4C4;
+	font-family: 'Roboto';
+}
+
+.search-form{
+
+	
+	
+	margin: 0 auto;
+	margin-left: 77px;
+	margin-top: 62px;
+	align-items: center;
+}
+
+.search-form__input{
+	padding: 13px 5px;
+	width: 500px;
+	height: 61px;
+	background: #FFFFFF;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 56px;
+	border: 1px;
+}
+
+.search-form__list{
+	margin: 0;
+}
+
+.list-item{
+	display: flex;
+	width: 500px;
+	height: 44px;
+	border: 2px solid black;
+	background-color: #E3E3E3;
+	align-items: center;
+
+
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 35px;
+
+	color: #000000;
+}
+
+.list-item:hover{
+	cursor: pointer;
+}
+
+.main{
+	display: flex;
+	margin: 0 auto;
+	margin-top: 265px;
+	flex-direction: column;
+	margin-left: 74px;
+}
+
+.container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 8px;
+	width: 503px;
+	height: 101px;
+	border: 1px solid black;
+	background: #E27BEB;
+	margin: 0;
+}
+
+.props{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
+
+	color: #000000;
+}
+
+button{
+	display: flex;
+	align-items: center;
+	width: 45px;
+	height: 45px;
+	background-color: transparent;
+	background-image: url(/img/close1.svg), url(/img/close2.svg);
+	background-repeat: no-repeat;
+}
+
