@@ -8,7 +8,7 @@ export class SEARCH{
         this.searchInput.addEventListener('keydown', (event) => {
             if(event.code == 'Space') return;
         })
-        this.searchInput.addEventListener('keyup', this.debounce(this.searchRepo.bind(this), 200))
+        this.searchInput.addEventListener('keyup', this.debounce(this.searchRepo.bind(this), 500))
     }
 
     searchRepo(){
