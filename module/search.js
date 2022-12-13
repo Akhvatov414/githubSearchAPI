@@ -12,10 +12,18 @@ export class SEARCH{
         this.searchInput.oninput = this.debounce(this.searchRepo.bind(this), 500)
     }
 
+    getSpacesCount(value){
+        let countChar = 0;
+        for(let i = 0; i < value.length; i++){
+            countChar += value.charAt(i) === ' ' ? 1 : 0;
+        }
+        return countChar;
+    }
+
     searchRepo(){
         if(this.searchInput.value){
             if(this.searchInput.value === '') console.log(123);
-            console.log(this.searchInput.value.length);
+            if(this.getSpacesCount(this.searchInput.value) == this.searchInput.value.length) return;
             if(this.listItem !== null){
                 document.querySelectorAll('.list-item').forEach(el => el.remove())
             }            
