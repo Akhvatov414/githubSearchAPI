@@ -5,22 +5,20 @@ export class SEARCH{
         this.listItem = document.querySelector('.list-item');
         this.searchInput = document.querySelector('.search-form__input');
         this.autocompleteList = document.querySelector('.search-form__list');
-        this.searchInput.addEventListener('keydown', (event) => {
+        this.searchInput.addEventListener('keyup', (event) => {
             if(event.code == 'Space') return;
         })
-        this.searchInput.addEventListener('keyup', this.debounce(this.searchRepo.bind(this), 500))
+        //this.searchInput.addEventListener('keyup', this.debounce(this.searchRepo.bind(this), 500))
+        this.searchInput.oninput = this.debounce(this.searchRepo.bind(this), 500)
     }
 
     searchRepo(){
         if(this.searchInput.value){
-            if(this.searchInput.value === '') console.log(123);;
-            if(this.listItem === null){ 
-                console.log('Пустой')
-            } else {
-                //console.log(document.querySelectorAll('.list-item'));
+            if(this.searchInput.value === '') console.log(123);
+            console.log(this.searchInput.value.length);
+            if(this.listItem !== null){
                 document.querySelectorAll('.list-item').forEach(el => el.remove())
-            }
-            
+            }            
             this.api.fetchRepos(this.searchInput.value)
                 .then(res => this.processingResponse(res))
         } else {
@@ -39,8 +37,6 @@ export class SEARCH{
                     repos.forEach((repo, index) => {
                         if (index <= 4){
                             this.createRepo(repo);
-                        } else {
-                            return
                         }
                     })
                 }

@@ -7,7 +7,7 @@ export class API{
 
     async fetchRepos(searchValue){
         try{
-            return await fetch(`${URL}search/repositories?q=${searchValue}`)
+            return await fetch(`${URL}search/repositories?q=${searchValue}`);
         } catch(err){
             throw err;
         }
